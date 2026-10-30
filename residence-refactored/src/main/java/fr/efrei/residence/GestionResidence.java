@@ -13,6 +13,7 @@ public class GestionResidence {
 
     private static final int ECHELON_MIN = 0;
     private static final int ECHELON_MAX = 7;
+    private static final int PLACES_MIN_COLOCATION = 2;
     private static final double COEF_SOLVABILITE = 3;
     private static final double COEF_SOLVABILITE_ALTERNANT = 2;
     private static final double MOIS_CAUTION_INTERNATIONAL = 2;
@@ -78,6 +79,9 @@ public class GestionResidence {
         if (Residence.trouver(numero) != null) {
             System.out.println("Logement " + numero + " existe déjà");
             return null;
+        }
+        if (type == TypeLogement.COLOCATION) {
+            param = Math.max(param, PLACES_MIN_COLOCATION);
         }
         Logement l = LogementFactory.creer(type, numero, surface, etage, meuble, param);
         if (l == null) {
