@@ -1,0 +1,1544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="fr.efrei.residence.NouveauSystemeContratTest" time="0.229" tests="101" errors="0" skipped="0" failures="0" flakes="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/gabiqo/refactoring-exam/residence-refactored/target/test-classes:/Users/gabiqo/refactoring-exam/residence-refactored/target/classes:/Users/gabiqo/refactoring-exam/residence-contrat/target/residence-contrat-1.0-SNAPSHOT.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter/5.13.4/junit-jupiter-5.13.4.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.4/junit-jupiter-api-5.13.4.jar:/Users/gabiqo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/gabiqo/.m2/repository/org/junit/platform/junit-platform-commons/1.13.4/junit-platform-commons-1.13.4.jar:/Users/gabiqo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.13.4/junit-jupiter-params-5.13.4.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.13.4/junit-jupiter-engine-5.13.4.jar:/Users/gabiqo/.m2/repository/org/junit/platform/junit-platform-engine/1.13.4/junit-platform-engine-1.13.4.jar"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@25/25.0.5.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/gabiqo/refactoring-exam/residence-refactored/target/surefire/surefirebooter-20261030101433651_84.jar /Users/gabiqo/refactoring-exam/residence-refactored/target/surefire 2026-10-30T10-14-32_783-jvmRun1 surefire-20261030101433651_82tmp surefire_1-20261030101433651_83tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/gabiqo/refactoring-exam/residence-refactored/target/test-classes:/Users/gabiqo/refactoring-exam/residence-refactored/target/classes:/Users/gabiqo/refactoring-exam/residence-contrat/target/residence-contrat-1.0-SNAPSHOT.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter/5.13.4/junit-jupiter-5.13.4.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.4/junit-jupiter-api-5.13.4.jar:/Users/gabiqo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/gabiqo/.m2/repository/org/junit/platform/junit-platform-commons/1.13.4/junit-platform-commons-1.13.4.jar:/Users/gabiqo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.13.4/junit-jupiter-params-5.13.4.jar:/Users/gabiqo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.13.4/junit-jupiter-engine-5.13.4.jar:/Users/gabiqo/.m2/repository/org/junit/platform/junit-platform-engine/1.13.4/junit-platform-engine-1.13.4.jar"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/gabiqo"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-10-22"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk@25/25.0.5.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/gabiqo/refactoring-exam/residence-refactored"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/gabiqo/refactoring-exam/residence-refactored/target/surefire/surefirebooter-20261030101433651_84.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="25.0.5.0.2"/>
+    <property name="user.name" value="gabiqo"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.5.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/gabiqo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/s6/1dnw9s4d0vb8ghw3wb0rb_1w0000gn/T/"/>
+    <property name="java.version" value="25.0.5.0.2"/>
+    <property name="user.dir" value="/Users/gabiqo/refactoring-exam/residence-refactored"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/gabiqo/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="25.0.5.0.2"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="rapport_initial" classname="fr.efrei.residence.contrat.ContratResidenceTest$Rapport" time="0.025">
+    <system-out><![CDATA[[DB] Connexion à jdbc:postgresql://db.campusvert.local:5432/residence
+[SQL] SELECT * FROM bail
+]]></system-out>
+  </testcase>
+  <testcase name="rapport_en_cours_d_annee" classname="fr.efrei.residence.contrat.ContratResidenceTest$Rapport" time="0.019">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Emma PETIT (STANDARD)
+--- Attribution d'un STUDIO à Emma PETIT
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'A102', 'SIGNE', 437.5)
+  Bail BAIL-002 signé : A102, 437,50 € CC/mois, caution 402,50 €, frais de dossier 100,00 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement A102, loyer 437,50 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-3', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-3 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-003', 'ETU-3', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-003 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-003 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-003'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-003'
+Entrée dans les lieux : BAIL-003 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-003'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 114.75 WHERE id = 'BAIL-003'
+Paiement BAIL-003 2026-09 : 100,00 € / 214,75 €
+[SMS] -> 0611223344 : Paiement incomplet 2026-09 - Nous avons reçu 100,00 € sur 214,75 €. Reste dû : 114,75 €.
+[SQL] SELECT * FROM bail
+]]></system-out>
+  </testcase>
+  <testcase name="un_bail_termine_avec_un_reste_du_est_relance" classname="fr.efrei.residence.contrat.ContratResidenceTest$Relances" time="0.01">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 04/11/2026
+[SMS] -> 0611223344 : Préavis de départ - Votre préavis de 15 jours est enregistré. Fin du bail le 04/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[ENTRETIEN] Nettoyage des parties communes de la colocation B301
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 40.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 05/11/2026 : caution 0,00 €, retenues 40,00 €, impayés 0,00 € -> restitué 0,00 €
+[SMS] -> 0611223344 : Sortie du logement B301 - Votre dépôt de garantie : 0,00 € vous sera restitué sous 30 jours. Il reste 40,00 € à régler.
+--- Relance des impayés
+[SQL] SELECT * FROM bail
+[SMS] -> 0611223344 : Campus Vert : 40,00 € impayés sur BAIL-001
+]]></system-out>
+  </testcase>
+  <testcase name="aucune_relance_sans_impaye" classname="fr.efrei.residence.contrat.ContratResidenceTest$Relances" time="0.005">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+--- Relance des impayés
+[SQL] SELECT * FROM bail
+]]></system-out>
+  </testcase>
+  <testcase name="seuls_les_baux_avec_un_solde_du_sont_relances" classname="fr.efrei.residence.contrat.ContratResidenceTest$Relances" time="0.016">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-2 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-002 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-002 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-002'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-002'
+Entrée dans les lieux : BAIL-002 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-3', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-3 Emma PETIT (STANDARD)
+--- Attribution d'un STUDIO à Emma PETIT
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-003', 'ETU-3', 'A102', 'SIGNE', 437.5)
+  Bail BAIL-003 signé : A102, 437,50 € CC/mois, caution 402,50 €, frais de dossier 100,00 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Votre bail BAIL-003
+        Bienvenue à la Résidence Campus Vert ! Logement A102, loyer 437,50 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-003'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-003'
+Entrée dans les lieux : BAIL-003 le 01/09/2026
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A102 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM etudiant WHERE email = 'chloe.durand@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-4', 'Durand', 'chloe.durand@mail.fr', 'ALTERNANT')
+Étudiant inscrit : ETU-4 Chloé DURAND (ALTERNANT)
+--- Attribution d'un T1 à Chloé DURAND
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-004', 'ETU-4', 'A104', 'SIGNE', 463.49)
+  Bail BAIL-004 signé : A104, 463,49 € CC/mois, caution 428,49 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> chloe.durand@mail.fr | Votre bail BAIL-004
+        Bienvenue à la Résidence Campus Vert ! Logement A104, loyer 463,49 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-004'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-004'
+Entrée dans les lieux : BAIL-004 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> chloe.durand@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A104 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 21.63 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 454,30 € (dont pénalité 21,63 €)
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Paiement incomplet 2026-09
+        Nous avons reçu 432,67 € sur 454,30 €. Reste dû : 21,63 €.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-002'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 114.75 WHERE id = 'BAIL-002'
+Paiement BAIL-002 2026-09 : 100,00 € / 214,75 €
+[SMS] -> 0611223344 : Paiement incomplet 2026-09 - Nous avons reçu 100,00 € sur 214,75 €. Reste dû : 114,75 €.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-003'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 37.5 WHERE id = 'BAIL-003'
+Paiement BAIL-003 2026-09 : 400,00 € / 437,50 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Paiement incomplet 2026-09
+        Nous avons reçu 400,00 € sur 437,50 €. Reste dû : 37,50 €.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-004'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = -536.51 WHERE id = 'BAIL-004'
+Paiement BAIL-004 2026-09 : 1000,00 € / 463,49 €
+[EMAIL] gestion@campusvert.fr -> chloe.durand@mail.fr | Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+--- Relance des impayés
+[SQL] SELECT * FROM bail
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | RELANCE - loyer impayé
+        Bonjour Alice, il reste 21,63 € à régler sur le bail BAIL-001.
+[SMS] -> 0611223344 : Campus Vert : 114,75 € impayés sur BAIL-002
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Relance loyer impayé
+        Il reste 37,50 € à régler sur le bail BAIL-003.
+]]></system-out>
+  </testcase>
+  <testcase name="courrier_a_l_adresse_postale" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.004">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Emma PETIT (STANDARD)
+--- Attribution d'un STUDIO à Emma PETIT
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="un_international_recoit_aussi_un_email_en_anglais" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.003">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'diego.alvarez@mail.es'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Alvarez', 'diego.alvarez@mail.es', 'INTERNATIONAL')
+Étudiant inscrit : ETU-1 Diego ALVAREZ (INTERNATIONAL)
+--- Attribution d'un T2 à Diego ALVAREZ
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A201', 'SIGNE', 675.0)
+  Bail BAIL-001 signé : A201, 675,00 € CC/mois, caution 1280,00 €, frais de dossier 150,00 €
+[SMS] -> +34612345678 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="annulation" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.003">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ANNULE', solde = 0.0 WHERE id = 'BAIL-001'
+Bail BAIL-001 annulé, frais de dossier conservés : 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Annulation du bail BAIL-001
+        Votre bail est annulé. Les frais de dossier (100,00 €) restent acquis.
+]]></system-out>
+  </testcase>
+  <testcase name="sms_tronque_a_160_caracteres" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+]]></system-out>
+  </testcase>
+  <testcase name="paiement_incomplet" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.003">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 21.63 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 454,30 € (dont pénalité 21,63 €)
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Paiement incomplet 2026-09
+        Nous avons reçu 432,67 € sur 454,30 €. Reste dû : 21,63 €.
+]]></system-out>
+  </testcase>
+  <testcase name="un_email_a_chaque_etape" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 0.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 20/11/2026 : caution 397,67 €, retenues 0,00 €, impayés 0,00 € -> restitué 397,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Sortie du logement A001
+        Votre dépôt de garantie : 397,67 € vous sera restitué sous 30 jours.
+]]></system-out>
+  </testcase>
+  <testcase name="un_international_par_email_ne_recoit_qu_un_email" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'li.wang@mail.cn'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Wang', 'li.wang@mail.cn', 'INTERNATIONAL')
+Étudiant inscrit : ETU-1 Li WANG (INTERNATIONAL)
+--- Attribution d'un T2 à Li WANG
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A201', 'SIGNE', 675.0)
+  Bail BAIL-001 signé : A201, 675,00 € CC/mois, caution 1280,00 €, frais de dossier 150,00 €
+[EMAIL] gestion@campusvert.fr -> li.wang@mail.cn | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="sms_avec_le_sujet_et_le_message" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="sms_de_sortie_avec_reste_du" classname="fr.efrei.residence.contrat.ContratResidenceTest$Notifications" time="0.003">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 04/11/2026
+[SMS] -> 0611223344 : Préavis de départ - Votre préavis de 15 jours est enregistré. Fin du bail le 04/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[ENTRETIEN] Nettoyage des parties communes de la colocation B301
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 40.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 05/11/2026 : caution 0,00 €, retenues 40,00 €, impayés 0,00 € -> restitué 0,00 €
+[SMS] -> 0611223344 : Sortie du logement B301 - Votre dépôt de garantie : 0,00 € vous sera restitué sous 30 jours. Il reste 40,00 € à régler.
+]]></system-out>
+  </testcase>
+  <testcase name="quittance_d_un_loyer_regle" classname="fr.efrei.residence.contrat.ContratResidenceTest$Quittances" time="0.003">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 214,75 € / 214,75 €
+[SMS] -> 0611223344 : Quittance 2026-09 - Merci, votre loyer de 2026-09 est réglé.
+]]></system-out>
+  </testcase>
+  <testcase name="quittance_avec_penalite_et_reste_du" classname="fr.efrei.residence.contrat.ContratResidenceTest$Quittances" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 486.67)
+  Bail BAIL-001 signé : A001, 486,67 € CC/mois, caution 451,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 486,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 111.0 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 400,00 € / 511,00 € (dont pénalité 24,33 €)
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Paiement incomplet 2026-09
+        Nous avons reçu 400,00 € sur 511,00 €. Reste dû : 111,00 €.
+]]></system-out>
+  </testcase>
+  <testcase name="quittance_d_un_mois_non_paye" classname="fr.efrei.residence.contrat.ContratResidenceTest$Quittances" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+]]></system-out>
+  </testcase>
+  <testcase name="quittance_d_un_bail_inconnu" classname="fr.efrei.residence.contrat.ContratResidenceTest$Quittances" time="0.0"/>
+  <testcase name="les_options_sont_listees_dans_un_ordre_fixe" classname="fr.efrei.residence.contrat.ContratResidenceTest$Quittances" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'diego.alvarez@mail.es'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Alvarez', 'diego.alvarez@mail.es', 'INTERNATIONAL')
+Étudiant inscrit : ETU-1 Diego ALVAREZ (INTERNATIONAL)
+--- Attribution d'un T2 à Diego ALVAREZ
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A201', 'SIGNE', 812.2)
+  Bail BAIL-001 signé : A201, 812,20 € CC/mois, caution 1554,40 €, frais de dossier 150,00 €
+[SMS] -> +34612345678 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 812,20 € charges comprises.
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 812,20 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> +34612345678 : État des lieux d'entrée - Votre état des lieux d'entrée du logement A201 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A201 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = -187.8 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 1000,00 € / 812,20 €
+[SMS] -> +34612345678 : Quittance 2026-09 - Merci, votre loyer de 2026-09 est réglé.
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+]]></system-out>
+  </testcase>
+  <testcase name="la_sortie_libere_le_logement" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.004">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 0.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 20/11/2026 : caution 397,67 €, retenues 0,00 €, impayés 0,00 € -> restitué 397,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Sortie du logement A001
+        Votre dépôt de garantie : 397,67 € vous sera restitué sous 30 jours.
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Emma PETIT (STANDARD)
+--- Attribution d'un STUDIO à Emma PETIT
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-002 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="la_sortie_d_un_colocataire_libere_sa_place" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Alice MARTIN (STANDARD)
+--- Attribution d'un COLOCATION à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-002 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 04/11/2026
+[SMS] -> 0611223344 : Préavis de départ - Votre préavis de 15 jours est enregistré. Fin du bail le 04/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[ENTRETIEN] Nettoyage des parties communes de la colocation B301
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 0.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 05/11/2026 : caution 0,00 €, retenues 0,00 €, impayés 0,00 € -> restitué 0,00 €
+[SMS] -> 0611223344 : Sortie du logement B301 - Votre dépôt de garantie : 0,00 € vous sera restitué sous 30 jours.
+]]></system-out>
+  </testcase>
+  <testcase name="penalite_minimum_de_10_euros" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.004">
+    <system-out><![CDATA[Logement ajouté : C010 (COLOCATION)
+[SQL] SELECT * FROM etudiant WHERE email = 'un@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'un@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Un TEST (STANDARD)
+--- Attribution d'un COLOCATION à Un TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-001 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> un@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'deux@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Test', 'deux@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Deux TEST (STANDARD)
+--- Attribution d'un COLOCATION à Deux TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-002 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> deux@mail.fr | Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'trois@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-3', 'Test', 'trois@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-3 Trois TEST (STANDARD)
+--- Attribution d'un COLOCATION à Trois TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-003', 'ETU-3', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-003 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> trois@mail.fr | Votre bail BAIL-003
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'quatre@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-4', 'Test', 'quatre@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-4 Quatre TEST (STANDARD)
+--- Attribution d'un COLOCATION à Quatre TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-004', 'ETU-4', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-004 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> quatre@mail.fr | Votre bail BAIL-004
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'cinq@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-5', 'Test', 'cinq@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-5 Cinq TEST (STANDARD)
+--- Attribution d'un COLOCATION à Cinq TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-005', 'ETU-5', 'C001', 'SIGNE', 277.37)
+  Bail BAIL-005 signé : C001, 277,37 € CC/mois, caution 252,37 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> cinq@mail.fr | Votre bail BAIL-005
+        Bienvenue à la Résidence Campus Vert ! Logement C001, loyer 277,37 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'six@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-6', 'Test', 'six@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-6 Six TEST (STANDARD)
+--- Attribution d'un COLOCATION à Six TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-006', 'ETU-6', 'C001', 'SIGNE', 277.37)
+  Bail BAIL-006 signé : C001, 277,37 € CC/mois, caution 252,37 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> six@mail.fr | Votre bail BAIL-006
+        Bienvenue à la Résidence Campus Vert ! Logement C001, loyer 277,37 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'sept@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-7', 'Test', 'sept@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-7 Sept TEST (STANDARD)
+--- Attribution d'un COLOCATION à Sept TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-007', 'ETU-7', 'C001', 'SIGNE', 277.37)
+  Bail BAIL-007 signé : C001, 277,37 € CC/mois, caution 252,37 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> sept@mail.fr | Votre bail BAIL-007
+        Bienvenue à la Résidence Campus Vert ! Logement C001, loyer 277,37 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'huit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-8', 'Test', 'huit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-8 Huit TEST (STANDARD)
+--- Attribution d'un COLOCATION à Huit TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-008', 'ETU-8', 'C010', 'SIGNE', 107.5)
+  Bail BAIL-008 signé : C010, 107,50 € CC/mois, caution 82,50 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> huit@mail.fr | Votre bail BAIL-008
+        Bienvenue à la Résidence Campus Vert ! Logement C010, loyer 107,50 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-008'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-008'
+Entrée dans les lieux : BAIL-008 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> huit@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement C010 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-008'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 10.0 WHERE id = 'BAIL-008'
+Paiement BAIL-008 2026-09 : 107,50 € / 117,50 € (dont pénalité 10,00 €)
+[EMAIL] gestion@campusvert.fr -> huit@mail.fr | Paiement incomplet 2026-09
+        Nous avons reçu 107,50 € sur 117,50 €. Reste dû : 10,00 €.
+]]></system-out>
+  </testcase>
+  <testcase name="plus_de_paiement_apres_la_sortie" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 0.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 20/11/2026 : caution 397,67 €, retenues 0,00 €, impayés 0,00 € -> restitué 397,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Sortie du logement A001
+        Votre dépôt de garantie : 397,67 € vous sera restitué sous 30 jours.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Paiement refusé pour BAIL-001
+]]></system-out>
+  </testcase>
+  <testcase name="entree_dans_les_lieux" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+]]></system-out>
+  </testcase>
+  <testcase name="annulation_en_colocation" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.0">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ANNULE', solde = 0.0 WHERE id = 'BAIL-001'
+Bail BAIL-001 annulé, frais de dossier conservés : 0,00 €
+[SMS] -> 0611223344 : Annulation du bail BAIL-001 - Votre bail est annulé. Les frais de dossier (0,00 €) restent acquis.
+]]></system-out>
+  </testcase>
+  <testcase name="preavis_de_30_jours_pour_un_international" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'diego.alvarez@mail.es'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Alvarez', 'diego.alvarez@mail.es', 'INTERNATIONAL')
+Étudiant inscrit : ETU-1 Diego ALVAREZ (INTERNATIONAL)
+--- Attribution d'un T2 à Diego ALVAREZ
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A201', 'SIGNE', 675.0)
+  Bail BAIL-001 signé : A201, 675,00 € CC/mois, caution 1280,00 €, frais de dossier 150,00 €
+[SMS] -> +34612345678 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> +34612345678 : État des lieux d'entrée - Votre état des lieux d'entrée du logement A201 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A201 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[SMS] -> +34612345678 : Préavis de départ - Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+]]></system-out>
+  </testcase>
+  <testcase name="annulation_d_un_bail_signe" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ANNULE', solde = 0.0 WHERE id = 'BAIL-001'
+Bail BAIL-001 annulé, frais de dossier conservés : 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Annulation du bail BAIL-001
+        Votre bail est annulé. Les frais de dossier (100,00 €) restent acquis.
+]]></system-out>
+  </testcase>
+  <testcase name="ce_que_la_caution_ne_couvre_pas_reste_du" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 04/11/2026
+[SMS] -> 0611223344 : Préavis de départ - Votre préavis de 15 jours est enregistré. Fin du bail le 04/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[ENTRETIEN] Nettoyage des parties communes de la colocation B301
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 40.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 05/11/2026 : caution 0,00 €, retenues 40,00 €, impayés 0,00 € -> restitué 0,00 €
+[SMS] -> 0611223344 : Sortie du logement B301 - Votre dépôt de garantie : 0,00 € vous sera restitué sous 30 jours. Il reste 40,00 € à régler.
+]]></system-out>
+  </testcase>
+  <testcase name="les_paiements_partiels_s_accumulent" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 32.67 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 400,00 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Paiement incomplet 2026-09
+        Nous avons reçu 400,00 € sur 432,67 €. Reste dû : 32,67 €.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 32.67 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-10 : 432,67 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Quittance 2026-10
+        Merci, votre loyer de 2026-10 est réglé.
+]]></system-out>
+  </testcase>
+  <testcase name="preavis_de_30_jours_pour_un_standard" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+]]></system-out>
+  </testcase>
+  <testcase name="bail_inconnu" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM bail WHERE id = 'BAIL-999'
+Entrée impossible pour BAIL-999
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-999'
+Paiement refusé pour BAIL-999
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-999'
+Préavis impossible pour BAIL-999
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-999'
+Sortie impossible pour BAIL-999
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-999'
+Annulation impossible pour BAIL-999
+]]></system-out>
+  </testcase>
+  <testcase name="pas_de_preavis_sans_entree" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Préavis impossible pour BAIL-001
+]]></system-out>
+  </testcase>
+  <testcase name="une_avance_n_est_pas_deduite_de_la_caution" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = -67.33 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 500,00 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = -67.33 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 0.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 20/11/2026 : caution 397,67 €, retenues 0,00 €, impayés 0,00 € -> restitué 397,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Sortie du logement A001
+        Votre dépôt de garantie : 397,67 € vous sera restitué sous 30 jours.
+]]></system-out>
+  </testcase>
+  <testcase name="penalite_de_5_pourcent_apres_le_5" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 21.63 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 454,30 € (dont pénalité 21,63 €)
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Paiement incomplet 2026-09
+        Nous avons reçu 432,67 € sur 454,30 €. Reste dû : 21,63 €.
+]]></system-out>
+  </testcase>
+  <testcase name="pas_d_entree_avant_la_signature" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Entrée impossible avant la signature du bail
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 25/08/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 25/08/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+]]></system-out>
+  </testcase>
+  <testcase name="preavis_de_15_jours_pour_un_boursier_ou_un_alternant" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM etudiant WHERE email = 'chloe.durand@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Durand', 'chloe.durand@mail.fr', 'ALTERNANT')
+Étudiant inscrit : ETU-2 Chloé DURAND (ALTERNANT)
+--- Attribution d'un T1 à Chloé DURAND
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'A104', 'SIGNE', 463.49)
+  Bail BAIL-002 signé : A104, 463,49 € CC/mois, caution 428,49 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> chloe.durand@mail.fr | Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement A104, loyer 463,49 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-002'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-002'
+Entrée dans les lieux : BAIL-002 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> chloe.durand@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A104 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 04/11/2026
+[SMS] -> 0611223344 : Préavis de départ - Votre préavis de 15 jours est enregistré. Fin du bail le 04/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-002'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-002'
+Préavis BAIL-002 : fin du bail le 04/11/2026
+[EMAIL] gestion@campusvert.fr -> chloe.durand@mail.fr | Préavis de départ
+        Votre préavis de 15 jours est enregistré. Fin du bail le 04/11/2026.
+]]></system-out>
+  </testcase>
+  <testcase name="pas_de_sortie_sans_preavis" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Sortie impossible pour BAIL-001
+]]></system-out>
+  </testcase>
+  <testcase name="paiement_a_l_heure_jusqu_au_5" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+]]></system-out>
+  </testcase>
+  <testcase name="pas_d_annulation_apres_l_entree" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Annulation impossible pour BAIL-001
+]]></system-out>
+  </testcase>
+  <testcase name="on_n_entre_qu_une_fois" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Entrée impossible pour BAIL-001
+]]></system-out>
+  </testcase>
+  <testcase name="un_boursier_n_a_pas_de_penalite" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[SMS] -> 0611223344 : État des lieux d'entrée - Votre état des lieux d'entrée du logement B301 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance ...
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 214,75 € / 214,75 €
+[SMS] -> 0611223344 : Quittance 2026-09 - Merci, votre loyer de 2026-09 est réglé.
+]]></system-out>
+  </testcase>
+  <testcase name="on_paie_encore_pendant_le_preavis" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 21.63 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-10 : 432,67 € / 454,30 € (dont pénalité 21,63 €)
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Paiement incomplet 2026-10
+        Nous avons reçu 432,67 € sur 454,30 €. Reste dû : 21,63 €.
+]]></system-out>
+  </testcase>
+  <testcase name="pas_de_paiement_avant_l_entree" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Paiement refusé pour BAIL-001
+]]></system-out>
+  </testcase>
+  <testcase name="la_caution_est_rendue_moins_les_retenues_et_les_impayes" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 21.63 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 432,67 € / 454,30 € (dont pénalité 21,63 €)
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Paiement incomplet 2026-09
+        Nous avons reçu 432,67 € sur 454,30 €. Reste dû : 21,63 €.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 21.63 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 0.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 20/11/2026 : caution 397,67 €, retenues 50,00 €, impayés 21,63 € -> restitué 326,04 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Sortie du logement A001
+        Votre dépôt de garantie : 326,04 € vous sera restitué sous 30 jours.
+]]></system-out>
+  </testcase>
+  <testcase name="un_trop_percu_est_une_avance" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = -67.33 WHERE id = 'BAIL-001'
+Paiement BAIL-001 2026-09 : 500,00 € / 432,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Quittance 2026-09
+        Merci, votre loyer de 2026-09 est réglé.
+]]></system-out>
+  </testcase>
+  <testcase name="pas_de_sortie_avant_la_fin_du_preavis" classname="fr.efrei.residence.contrat.ContratResidenceTest$CycleDeVie" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'ACTIF', solde = 0.0 WHERE id = 'BAIL-001'
+Entrée dans les lieux : BAIL-001 le 01/09/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | État des lieux d'entrée
+        Votre état des lieux d'entrée du logement A001 est fait le 01/09/2026. Remise des clés effectuée. Pensez à souscrire une assurance habitation si ce n'est pas déjà fait.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'PREAVIS', solde = 0.0 WHERE id = 'BAIL-001'
+Préavis BAIL-001 : fin du bail le 19/11/2026
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Préavis de départ
+        Votre préavis de 30 jours est enregistré. Fin du bail le 19/11/2026.
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+Sortie impossible avant la fin du préavis (19/11/2026)
+[SQL] SELECT * FROM bail WHERE id = 'BAIL-001'
+[SQL] UPDATE bail SET statut = 'TERMINE', solde = 0.0 WHERE id = 'BAIL-001'
+Sortie BAIL-001 le 19/11/2026 : caution 397,67 €, retenues 0,00 €, impayés 0,00 € -> restitué 397,67 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Sortie du logement A001
+        Votre dépôt de garantie : 397,67 € vous sera restitué sous 30 jours.
+]]></system-out>
+  </testcase>
+  <testcase name="un_refus_n_envoie_aucune_notification" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'modeste@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'modeste@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Modeste TEST (STANDARD)
+--- Attribution d'un STUDIO à Modeste TEST
+  A001 : ressources insuffisantes (432,67 €/mois)
+  A102 : ressources insuffisantes (437,50 €/mois)
+  B103 : ressources insuffisantes (385,00 €/mois)
+  Aucun logement disponible pour Modeste TEST
+]]></system-out>
+  </testcase>
+  <testcase name="une_colocation_se_remplit_avant_de_passer_a_la_suivante" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.003">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'coloc1@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'coloc1@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Coloc1 TEST (STANDARD)
+--- Attribution d'un COLOCATION à Coloc1 TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-001 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> coloc1@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'coloc2@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Test', 'coloc2@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Coloc2 TEST (STANDARD)
+--- Attribution d'un COLOCATION à Coloc2 TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-002 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> coloc2@mail.fr | Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'coloc3@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-3', 'Test', 'coloc3@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-3 Coloc3 TEST (STANDARD)
+--- Attribution d'un COLOCATION à Coloc3 TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-003', 'ETU-3', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-003 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> coloc3@mail.fr | Votre bail BAIL-003
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'coloc4@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-4', 'Test', 'coloc4@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-4 Coloc4 TEST (STANDARD)
+--- Attribution d'un COLOCATION à Coloc4 TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-004', 'ETU-4', 'B301', 'SIGNE', 278.0)
+  Bail BAIL-004 signé : B301, 278,00 € CC/mois, caution 253,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> coloc4@mail.fr | Votre bail BAIL-004
+        Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 278,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'coloc5@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-5', 'Test', 'coloc5@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-5 Coloc5 TEST (STANDARD)
+--- Attribution d'un COLOCATION à Coloc5 TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-005', 'ETU-5', 'C001', 'SIGNE', 277.37)
+  Bail BAIL-005 signé : C001, 277,37 € CC/mois, caution 252,37 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> coloc5@mail.fr | Votre bail BAIL-005
+        Bienvenue à la Résidence Campus Vert ! Logement C001, loyer 277,37 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="un_international_doit_couvrir_3_fois_le_loyer" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'international@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'international@mail.fr', 'INTERNATIONAL')
+Étudiant inscrit : ETU-1 Profil TEST (INTERNATIONAL)
+--- Attribution d'un T2 à Profil TEST
+  A201 : ressources insuffisantes (675,00 €/mois)
+  B202 : ressources insuffisantes (812,40 €/mois)
+  Aucun logement disponible pour Profil TEST
+[SQL] SELECT * FROM etudiant WHERE email = 'diego.alvarez@mail.es'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Alvarez', 'diego.alvarez@mail.es', 'INTERNATIONAL')
+Étudiant inscrit : ETU-2 Diego ALVAREZ (INTERNATIONAL)
+--- Attribution d'un T2 à Diego ALVAREZ
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-2', 'A201', 'SIGNE', 675.0)
+  Bail BAIL-001 signé : A201, 675,00 € CC/mois, caution 1280,00 €, frais de dossier 150,00 €
+[SMS] -> +34612345678 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="les_options_comptent_dans_la_solvabilite" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'juste@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'juste@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Juste TEST (STANDARD)
+--- Attribution d'un STUDIO à Juste TEST
+  A001 : ressources insuffisantes (477,67 €/mois)
+  A102 : ressources insuffisantes (482,50 €/mois)
+  B103 : ressources insuffisantes (430,00 €/mois)
+  Aucun logement disponible pour Juste TEST
+]]></system-out>
+  </testcase>
+  <testcase name="un_alternant_doit_couvrir_2_fois_le_loyer" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alternant@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'alternant@mail.fr', 'ALTERNANT')
+Étudiant inscrit : ETU-1 Profil TEST (ALTERNANT)
+--- Attribution d'un STUDIO à Profil TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 392.9)
+  Bail BAIL-001 signé : A001, 392,90 € CC/mois, caution 357,90 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alternant@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 392,90 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="un_boursier_est_garanti_quelles_que_soient_ses_ressources" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'hugo.leroy@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Leroy', 'hugo.leroy@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Hugo LEROY (BOURSIER)
+--- Attribution d'un STUDIO à Hugo LEROY
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 313.37)
+  Bail BAIL-001 signé : A001, 313,37 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[EMAIL] gestion@campusvert.fr -> hugo.leroy@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 313,37 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="le_logement_attribue_est_occupe" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="les_baux_sont_numerotes" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Emma PETIT (STANDARD)
+--- Attribution d'un T2 à Emma PETIT
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'A201', 'SIGNE', 675.0)
+  Bail BAIL-002 signé : A201, 675,00 € CC/mois, caution 640,00 €, frais de dossier 100,00 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="standard_un_mois_de_caution_et_100_euros_de_frais" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="les_ressources_doivent_couvrir_3_fois_le_loyer" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'moyen@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'moyen@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Moyen TEST (STANDARD)
+--- Attribution d'un STUDIO à Moyen TEST
+  A001 : ressources insuffisantes (432,67 €/mois)
+  A102 : ressources insuffisantes (437,50 €/mois)
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B103', 'SIGNE', 385.0)
+  Bail BAIL-001 signé : B103, 385,00 € CC/mois, caution 350,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> moyen@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement B103, loyer 385,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'modeste@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Test', 'modeste@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Modeste TEST (STANDARD)
+--- Attribution d'un STUDIO à Modeste TEST
+  A001 : ressources insuffisantes (432,67 €/mois)
+  A102 : ressources insuffisantes (437,50 €/mois)
+  Aucun logement disponible pour Modeste TEST
+]]></system-out>
+  </testcase>
+  <testcase name="international_deux_mois_de_caution_et_150_euros_de_frais" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'diego.alvarez@mail.es'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Alvarez', 'diego.alvarez@mail.es', 'INTERNATIONAL')
+Étudiant inscrit : ETU-1 Diego ALVAREZ (INTERNATIONAL)
+--- Attribution d'un T2 à Diego ALVAREZ
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A201', 'SIGNE', 720.0)
+  Bail BAIL-001 signé : A201, 720,00 € CC/mois, caution 1370,00 €, frais de dossier 150,00 €
+[SMS] -> +34612345678 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 720,00 € charges comprises.
+[EMAIL] gestion@campusvert.fr -> diego.alvarez@mail.es | [EN] Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 720,00 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="le_premier_logement_libre_du_type_demande_est_attribue" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.002">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 432.67)
+  Bail BAIL-001 signé : A001, 432,67 € CC/mois, caution 397,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 432,67 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Emma PETIT (STANDARD)
+--- Attribution d'un STUDIO à Emma PETIT
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'A102', 'SIGNE', 437.5)
+  Bail BAIL-002 signé : A102, 437,50 € CC/mois, caution 402,50 €, frais de dossier 100,00 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement A102, loyer 437,50 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="charges_reduites_en_colocation" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="alternant_un_mois_de_caution_et_100_euros_de_frais" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'chloe.durand@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Durand', 'chloe.durand@mail.fr', 'ALTERNANT')
+Étudiant inscrit : ETU-1 Chloé DURAND (ALTERNANT)
+--- Attribution d'un T1 à Chloé DURAND
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A104', 'SIGNE', 463.49)
+  Bail BAIL-001 signé : A104, 463,49 € CC/mois, caution 428,49 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> chloe.durand@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A104, loyer 463,49 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="un_alternant_sans_ressources_suffisantes_est_refuse" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alternant@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'alternant@mail.fr', 'ALTERNANT')
+Étudiant inscrit : ETU-1 Profil TEST (ALTERNANT)
+--- Attribution d'un STUDIO à Profil TEST
+  A001 : ressources insuffisantes (392,90 €/mois)
+  A102 : ressources insuffisantes (397,25 €/mois)
+  B103 : ressources insuffisantes (350,00 €/mois)
+  Aucun logement disponible pour Profil TEST
+]]></system-out>
+  </testcase>
+  <testcase name="boursier_ni_caution_ni_frais" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 Bilal HADDAD (BOURSIER)
+--- Attribution d'un COLOCATION à Bilal HADDAD
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'B301', 'SIGNE', 214.75)
+  Bail BAIL-001 signé : B301, 214,75 € CC/mois, caution 0,00 €, frais de dossier 0,00 €
+[SMS] -> 0611223344 : Votre bail BAIL-001 - Bienvenue à la Résidence Campus Vert ! Logement B301, loyer 214,75 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="refus_quand_plus_aucun_logement_n_est_libre" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'un@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Test', 'un@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Un TEST (STANDARD)
+--- Attribution d'un T2 à Un TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A201', 'SIGNE', 675.0)
+  Bail BAIL-001 signé : A201, 675,00 € CC/mois, caution 640,00 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> un@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A201, loyer 675,00 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'deux@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Test', 'deux@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Deux TEST (STANDARD)
+--- Attribution d'un T2 à Deux TEST
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-2', 'B202', 'SIGNE', 812.4)
+  Bail BAIL-002 signé : B202, 812,40 € CC/mois, caution 777,40 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> deux@mail.fr | Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement B202, loyer 812,40 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'trois@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-3', 'Test', 'trois@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-3 Trois TEST (STANDARD)
+--- Attribution d'un T2 à Trois TEST
+  Aucun logement disponible pour Trois TEST
+]]></system-out>
+  </testcase>
+  <testcase name="un_bail_signe_porte_le_loyer_et_les_charges" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un STUDIO à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A001', 'SIGNE', 486.67)
+  Bail BAIL-001 signé : A001, 486,67 € CC/mois, caution 451,67 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A001, loyer 486,67 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="un_etudiant_pmr_n_obtient_qu_un_logement_accessible" classname="fr.efrei.residence.contrat.ContratResidenceTest$Attribution" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+--- Attribution d'un T1 à Alice MARTIN
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-001', 'ETU-1', 'A104', 'SIGNE', 511.1)
+  Bail BAIL-001 signé : A104, 511,10 € CC/mois, caution 476,10 €, frais de dossier 100,00 €
+[EMAIL] gestion@campusvert.fr -> alice.martin@mail.fr | Votre bail BAIL-001
+        Bienvenue à la Résidence Campus Vert ! Logement A104, loyer 511,10 € charges comprises.
+[SQL] SELECT * FROM etudiant WHERE email = 'chloe.durand@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Durand', 'chloe.durand@mail.fr', 'ALTERNANT')
+Étudiant inscrit : ETU-2 Chloé DURAND (ALTERNANT)
+--- Attribution d'un T1 à Chloé DURAND
+  Aucun logement disponible pour Chloé DURAND
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-3', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-3 Emma PETIT (STANDARD)
+--- Attribution d'un T1 à Emma PETIT
+[SQL] INSERT INTO bail (id, etudiant, logement, statut, loyer) VALUES ('BAIL-002', 'ETU-3', 'B105', 'SIGNE', 475.0)
+  Bail BAIL-002 signé : B105, 475,00 € CC/mois, caution 440,00 €, frais de dossier 100,00 €
+[COURRIER] Emma PETIT, 12 rue des Lilas, 35000 Rennes | Objet : Votre bail BAIL-002
+        Bienvenue à la Résidence Campus Vert ! Logement B105, loyer 475,00 € charges comprises.
+]]></system-out>
+  </testcase>
+  <testcase name="parking_laverie_et_assurance_a_prix_fixe" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.001"/>
+  <testcase name="fibre_payante_sauf_en_colocation" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="alternant_10_pourcent" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.001"/>
+  <testcase name="menage_4_pourcent_en_colocation" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="studio_au_minimum_de_350_euros" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.001"/>
+  <testcase name="studio_meuble_au_rez_de_chaussee_minore_de_5_pourcent" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="la_remise_porte_aussi_sur_les_options" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="t1" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="t2" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="toutes_les_options" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="studio_meuble_majore_de_15_pourcent_apres_le_minimum" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="boursier_5_pourcent_par_echelon" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="international_sans_remise" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.001"/>
+  <testcase name="colocation_loyer_par_place" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="devis_sur_un_logement_inconnu" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.002"/>
+  <testcase name="l_echelon_est_ignore_hors_boursier" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="le_menage_s_applique_avant_les_options_a_prix_fixe" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="remise_boursier_plafonnee_a_30_pourcent" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.001"/>
+  <testcase name="menage_8_pourcent" classname="fr.efrei.residence.contrat.ContratResidenceTest$Loyer" time="0.0"/>
+  <testcase name="le_parc_initial_vient_du_catalogue" classname="fr.efrei.residence.contrat.ContratResidenceTest$Logements" time="0.001"/>
+  <testcase name="le_balcon_d_un_t2_ajoute_compte_dans_le_rapport" classname="fr.efrei.residence.contrat.ContratResidenceTest$Logements" time="0.001">
+    <system-out><![CDATA[Logement ajouté : C201 (T2)
+[SQL] SELECT * FROM bail
+]]></system-out>
+  </testcase>
+  <testcase name="on_peut_ajouter_un_logement" classname="fr.efrei.residence.contrat.ContratResidenceTest$Logements" time="0.0">
+    <system-out><![CDATA[Logement ajouté : C002 (STUDIO)
+]]></system-out>
+  </testcase>
+  <testcase name="accessible_pmr_au_rez_de_chaussee_ou_dans_le_batiment_a" classname="fr.efrei.residence.contrat.ContratResidenceTest$Logements" time="0.001"/>
+  <testcase name="une_colocation_a_au_moins_2_places" classname="fr.efrei.residence.contrat.ContratResidenceTest$Logements" time="0.0">
+    <system-out><![CDATA[Logement ajouté : C010 (COLOCATION)
+]]></system-out>
+  </testcase>
+  <testcase name="un_logement_inconnu_est_introuvable" classname="fr.efrei.residence.contrat.ContratResidenceTest$Logements" time="0.001"/>
+  <testcase name="un_numero_deja_utilise_est_refuse" classname="fr.efrei.residence.contrat.ContratResidenceTest$Logements" time="0.0">
+    <system-out><![CDATA[Logement A001 existe déjà
+]]></system-out>
+  </testcase>
+  <testcase name="un_international_doit_avoir_un_numero_international" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.0">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'a@mail.fr'
+Inscription refusée : numéro international (+XX) obligatoire
+[SQL] SELECT * FROM etudiant WHERE email = 'b@mail.fr'
+Inscription refusée : numéro international (+XX) obligatoire
+[SQL] SELECT * FROM etudiant WHERE email = 'li.wang@mail.cn'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Wang', 'li.wang@mail.cn', 'INTERNATIONAL')
+Étudiant inscrit : ETU-1 Li WANG (INTERNATIONAL)
+]]></system-out>
+  </testcase>
+  <testcase name="l_email_doit_etre_valide" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.002">
+    <system-out><![CDATA[Inscription refusée : email invalide (pas-un-email)
+Inscription refusée : email invalide (@mail.fr)
+Inscription refusée : email invalide (a@mailfr)
+Inscription refusée : email invalide (null)
+]]></system-out>
+  </testcase>
+  <testcase name="un_etudiant_valide_est_inscrit" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+]]></system-out>
+  </testcase>
+  <testcase name="le_canal_courrier_exige_une_adresse" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.0">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'a@mail.fr'
+Inscription refusée : adresse obligatoire pour le courrier
+[SQL] SELECT * FROM etudiant WHERE email = 'b@mail.fr'
+Inscription refusée : adresse obligatoire pour le courrier
+]]></system-out>
+  </testcase>
+  <testcase name="un_email_ne_peut_etre_inscrit_qu_une_fois" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+Inscription refusée : alice.martin@mail.fr déjà inscrit
+]]></system-out>
+  </testcase>
+  <testcase name="chaque_etudiant_a_sa_propre_reference" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.0">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-2 Emma PETIT (STANDARD)
+]]></system-out>
+  </testcase>
+  <testcase name="un_boursier_a_un_echelon_entre_0_et_7" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.0">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'a0@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'A', 'a0@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-1 B A (BOURSIER)
+[SQL] SELECT * FROM etudiant WHERE email = 'a7@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'A', 'a7@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-2 B A (BOURSIER)
+[SQL] SELECT * FROM etudiant WHERE email = 'a8@mail.fr'
+Inscription refusée : échelon de bourse invalide
+[SQL] SELECT * FROM etudiant WHERE email = 'am@mail.fr'
+Inscription refusée : échelon de bourse invalide
+]]></system-out>
+  </testcase>
+  <testcase name="l_inscription_n_envoie_aucune_notification" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'alice.martin@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-1', 'Martin', 'alice.martin@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-1 Alice MARTIN (STANDARD)
+[SQL] SELECT * FROM etudiant WHERE email = 'bilal.haddad@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-2', 'Haddad', 'bilal.haddad@mail.fr', 'BOURSIER')
+Étudiant inscrit : ETU-2 Bilal HADDAD (BOURSIER)
+[SQL] SELECT * FROM etudiant WHERE email = 'emma.petit@mail.fr'
+[SQL] INSERT INTO etudiant (id, nom, email, profil) VALUES ('ETU-3', 'Petit', 'emma.petit@mail.fr', 'STANDARD')
+Étudiant inscrit : ETU-3 Emma PETIT (STANDARD)
+]]></system-out>
+  </testcase>
+  <testcase name="le_canal_sms_exige_un_telephone" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.001">
+    <system-out><![CDATA[[SQL] SELECT * FROM etudiant WHERE email = 'a@mail.fr'
+Inscription refusée : téléphone obligatoire pour les SMS
+]]></system-out>
+  </testcase>
+  <testcase name="le_nom_est_obligatoire" classname="fr.efrei.residence.contrat.ContratResidenceTest$Inscription" time="0.0">
+    <system-out><![CDATA[Inscription refusée : nom obligatoire
+Inscription refusée : nom obligatoire
+]]></system-out>
+  </testcase>
+</testsuite>
