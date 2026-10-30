@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class Utils {
+    private static final double CENTIMES = 100.0;
 
     public static final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -18,7 +19,7 @@ public class Utils {
     }
 
     public static double arrondir(double x) {
-        return Math.round(x * 100.0) / 100.0;
+        return Math.round(x * CENTIMES) / CENTIMES;
     }
 
     public static boolean emailValide(String email) {

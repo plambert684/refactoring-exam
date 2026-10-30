@@ -2,56 +2,70 @@ package fr.efrei.residence;
 
 public class CalculateurLoyer {
 
-    /**
-     * Loyer mensuel hors charges, options comprises, remise déduite.
-     */
-    public double calculerLoyer(Logement l, String profil, int echelon, boolean parking, boolean menage,
+    private static final double PRIX_M2_STUDIO = 14;
+    private static final double LOYER_MIN_STUDIO = 350;
+    private static final double PRIX_M2_T1 = 13;
+    private static final double FORFAIT_T1 = 50;
+    private static final double PRIX_M2_T2 = 12;
+    private static final double FORFAIT_T2 = 100;
+    private static final double PRIX_M2_COLOCATION = 11;
+    private static final double MAJORATION_MEUBLE = 1.15;
+    private static final int ETAGE_REZ_DE_CHAUSSEE = 0;
+    private static final double MINORATION_REZ_DE_CHAUSSEE = 0.95;
+    private static final double MAJORATION_MENAGE = 1.08;
+    private static final double MAJORATION_MENAGE_COLOCATION = 1.04;
+    private static final double PRIX_PARKING = 45;
+    private static final double PRIX_LAVERIE = 12;
+    private static final double PRIX_FIBRE = 20;
+    private static final double PRIX_ASSURANCE = 9;
+    private static final double REMISE_PAR_ECHELON = 0.05;
+    private static final double REMISE_BOURSIER_MAX = 0.30;
+    private static final double COEF_ALTERNANT = 0.90;
+    private static final double CHARGES = 35;
+    private static final double CHARGES_COLOCATION = 25;
+    private static final double CENTIMES = 100.0;
+
+    /** Loyer mensuel hors charges, options comprises, remise déduite. */
+    public double calculerLoyer(Logement l, Profil profil, int echelon, boolean parking, boolean menage,
                                 boolean laverie, boolean fibre, boolean assurance) {
-        // loyer de base selon le type
         double loyer;
-        if (l.getType().equals("STUDIO")) {
-            loyer = l.getSurface() * 14;
-            if (loyer < 350) loyer = 350;
-        } else if (l.getType().equals("T1")) {
-            loyer = l.getSurface() * 13 + 50;
-        } else if (l.getType().equals("T2")) {
-            loyer = l.getSurface() * 12 + 100;
-        } else if (l.getType().equals("COLOCATION")) {
-            loyer = l.getSurface() * 11 / l.getNombrePlaces();
+        if (l.getType() == TypeLogement.STUDIO) {
+            loyer = l.getSurface() * PRIX_M2_STUDIO;
+            if (loyer < LOYER_MIN_STUDIO) loyer = LOYER_MIN_STUDIO;
+        } else if (l.getType() == TypeLogement.T1) {
+            loyer = l.getSurface() * PRIX_M2_T1 + FORFAIT_T1;
+        } else if (l.getType() == TypeLogement.T2) {
+            loyer = l.getSurface() * PRIX_M2_T2 + FORFAIT_T2;
+        } else if (l.getType() == TypeLogement.COLOCATION) {
+            loyer = l.getSurface() * PRIX_M2_COLOCATION / l.getNombrePlaces();
         } else {
             throw new IllegalArgumentException("Type de logement inconnu : " + l.getType());
         }
-
-        if (l.isMeuble()) loyer = loyer * 1.15;
-        if (l.getEtage() == 0) loyer = loyer * 0.95;
-
-        // options
+        if (l.isMeuble()) loyer = loyer * MAJORATION_MEUBLE;
+        if (l.getEtage() == ETAGE_REZ_DE_CHAUSSEE) loyer = loyer * MINORATION_REZ_DE_CHAUSSEE;
         if (menage) {
-            if (l.getType().equals("COLOCATION")) {
-                loyer = loyer * 1.04; // parties communes déjà nettoyées
+            if (l.getType() == TypeLogement.COLOCATION) {
+                loyer = loyer * MAJORATION_MENAGE_COLOCATION; // parties communes déjà nettoyées
             } else {
-                loyer = loyer * 1.08;
+                loyer = loyer * MAJORATION_MENAGE;
             }
         }
-        if (parking) loyer = loyer + 45;
-        if (laverie) loyer = loyer + 12;
-        if (fibre && !l.getType().equals("COLOCATION")) loyer = loyer + 20; // fibre incluse en coloc
-        if (assurance) loyer = loyer + 9;
-
-        // remise selon le profil
-        if (profil.equals("BOURSIER")) {
-            double taux = echelon * 0.05;
-            if (taux > 0.30) taux = 0.30;
+        if (parking) loyer = loyer + PRIX_PARKING;
+        if (laverie) loyer = loyer + PRIX_LAVERIE;
+        if (fibre && l.getType() != TypeLogement.COLOCATION) loyer = loyer + PRIX_FIBRE; // fibre incluse en coloc
+        if (assurance) loyer = loyer + PRIX_ASSURANCE;
+        if (profil == Profil.BOURSIER) {
+            double taux = echelon * REMISE_PAR_ECHELON;
+            if (taux > REMISE_BOURSIER_MAX) taux = REMISE_BOURSIER_MAX;
             loyer = loyer * (1 - taux);
-        } else if (profil.equals("ALTERNANT")) {
-            loyer = loyer * 0.90;
+        } else if (profil == Profil.ALTERNANT) {
+            loyer = loyer * COEF_ALTERNANT;
         }
-
-        return Math.round(loyer * 100.0) / 100.0;
+        return Math.round(loyer * CENTIMES) / CENTIMES;
     }
 
     public double calculerCharges(Logement l) {
-        if (l.getType().equals("COLOCATION")) return 25;
-        return 35;
+        if (l.getType() == TypeLogement.COLOCATION) return CHARGES_COLOCATION;
+        return CHARGES;
     }
 }
