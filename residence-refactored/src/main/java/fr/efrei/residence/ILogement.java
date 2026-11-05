@@ -26,19 +26,14 @@ public interface ILogement {
     void liberer(Etudiant e);
 
     Etudiant getOccupant();
-
-    // --- colocation ---
-    void ajouterColocataire(Etudiant e);
-
-    void retirerColocataire(Etudiant e);
-
-    List<Etudiant> getColocataires();
-
     int getNombrePlaces();
 
-    // --- extérieur ---
-    double getSurfaceBalcon();
+    int getNombreOccupants();
 
-    // --- entretien ---
-    void nettoyerPartiesCommunes();
+    default double getSurfaceBalcon() {
+        return 0;
+    }
+
+    default void apresSortie() {
+    }
 }
