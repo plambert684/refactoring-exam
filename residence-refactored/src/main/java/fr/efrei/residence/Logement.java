@@ -31,6 +31,14 @@ public abstract class Logement implements ILogement {
         return occupant == null;
     }
 
+    public int getNombrePlaces() {
+        return 1;
+    }
+
+    public int getNombreOccupants() {
+        return occupant == null ? 0 : 1;
+    }
+    
     public boolean estAccessiblePMR() {
         // seul le bâtiment A a un ascenseur
         return etage == ETAGE_REZ_DE_CHAUSSEE || numero.startsWith(BATIMENT_AVEC_ASCENSEUR);

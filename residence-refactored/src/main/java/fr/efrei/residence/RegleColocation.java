@@ -31,8 +31,4 @@ public class RegleColocation implements RegleTypeLogement {
         return Math.max(param, PLACES_MIN);
     }
 
-    @Override
-    public int placesOccupees(Logement l) {
-        return l.getColocataires().size();
-    }
 }

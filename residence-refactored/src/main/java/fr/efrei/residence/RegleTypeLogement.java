@@ -24,7 +24,4 @@ public interface RegleTypeLogement {
         return param;
     }
 
-    default int placesOccupees(Logement l) {
-        return l.estLibre() ? 0 : 1;
-    }
 }

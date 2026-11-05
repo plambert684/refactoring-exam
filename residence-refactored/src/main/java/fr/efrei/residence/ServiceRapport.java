@@ -32,12 +32,8 @@ public class ServiceRapport {
         double balconies = 0;
         for (Logement logement : residence.all()) {
             places.merge(logement.getType(), logement.getNombrePlaces(), Integer::sum);
-            occupied.merge(logement.getType(),
-                    logement.getType().regle().placesOccupees(logement), Integer::sum);
-            try {
-                balconies += logement.getSurfaceBalcon();
-            } catch (UnsupportedOperationException ignored) {
-            }
+            occupied.merge(logement.getType(), logement.getNombreOccupants(), Integer::sum);
+            balconies += logement.getSurfaceBalcon();
         }
         StringBuilder report = new StringBuilder();
         report.append("=============== RAPPORT ").append(Residence.NOM).append(" ===============\n");

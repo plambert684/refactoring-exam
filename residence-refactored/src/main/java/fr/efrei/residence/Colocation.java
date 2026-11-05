@@ -15,12 +15,15 @@ public class Colocation extends Logement {
 
     @Override
     public void loger(Etudiant e) {
-        throw new UnsupportedOperationException("Utiliser ajouterColocataire() pour une colocation");
+        if (colocataires.size() >= places) {
+            throw new IllegalStateException("Colocation " + numero + " complète");
+        }
+        colocataires.add(e);
     }
 
     @Override
     public void liberer(Etudiant e) {
-        throw new UnsupportedOperationException("Utiliser retirerColocataire() pour une colocation");
+        colocataires.remove(e);
     }
 
     @Override
@@ -34,30 +37,18 @@ public class Colocation extends Logement {
         return colocataires.get(0);
     }
 
-    public void ajouterColocataire(Etudiant e) {
-        if (colocataires.size() >= places) {
-            throw new IllegalStateException("Colocation " + numero + " complète");
-        }
-        colocataires.add(e);
-    }
-
-    public void retirerColocataire(Etudiant e) {
-        colocataires.remove(e);
-    }
-
-    public List<Etudiant> getColocataires() {
-        return colocataires;
-    }
-
+    @Override
     public int getNombrePlaces() {
         return places;
     }
 
-    public double getSurfaceBalcon() {
-        throw new UnsupportedOperationException("Les colocations n'ont pas de balcon");
+    @Override
+    public int getNombreOccupants() {
+        return colocataires.size();
     }
 
-    public void nettoyerPartiesCommunes() {
+    @Override
+    public void apresSortie() {
         System.out.println("[ENTRETIEN] Nettoyage des parties communes de la colocation " + numero);
     }
 }

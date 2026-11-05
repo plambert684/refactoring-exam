@@ -71,12 +71,8 @@ public class ServiceBail {
         if (bail == null || bail.getStatut() != StatutBail.PREAVIS
                 || date.isBefore(bail.getDateFin())) return false;
         Logement logement = bail.getLogement();
-        if (logement instanceof Colocation) {
-            logement.retirerColocataire(bail.getEtudiant());
-            logement.nettoyerPartiesCommunes();
-        } else {
-            logement.liberer(bail.getEtudiant());
-        }
+        logement.liberer(bail.getEtudiant());
+        logement.apresSortie();
         double unpaid = Math.max(bail.soldeDu, 0);
         double refund = bail.getCaution() - damageRetention - unpaid;
         double remaining = Math.max(-refund, 0);
@@ -96,8 +92,7 @@ public class ServiceBail {
         Bail bail = baux.trouver(id);
         if (bail == null || bail.getStatut() != StatutBail.SIGNE) return false;
         Logement logement = bail.getLogement();
-        if (logement instanceof Colocation) logement.retirerColocataire(bail.getEtudiant());
-        else logement.liberer(bail.getEtudiant());
+        logement.liberer(bail.getEtudiant());
         bail.setStatut(StatutBail.ANNULE);
         baux.mettreAJour(bail);
         notifications.notify(bail.getEtudiant(), "Annulation du bail " + id,

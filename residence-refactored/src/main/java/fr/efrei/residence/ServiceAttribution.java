@@ -48,8 +48,7 @@ public class ServiceAttribution {
             System.out.println("  Aucun logement disponible pour " + etudiant.getNomComplet());
             return null;
         }
-        if (choisi instanceof Colocation) choisi.ajouterColocataire(etudiant);
-        else choisi.loger(etudiant);
+        choisi.loger(etudiant);
 
         String id = identifiants.prochainId();
         Bail bail = new Bail(id, etudiant, choisi, dateSignature, options);
