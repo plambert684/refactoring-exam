@@ -1,6 +1,8 @@
 package fr.efrei.residence;
 
 import java.time.LocalDate;
+import java.util.EnumSet;
+import java.util.Set;
 
 public class Main {
 
@@ -34,13 +36,13 @@ public class Main {
 
         System.out.println();
         LocalDate signature = LocalDate.of(2026, 8, 25);
-        Bail bA = gestion.attribuerLogement(alice, TypeLogement.STUDIO, true, false, false, false, true, signature);
-        Bail bB = gestion.attribuerLogement(bilal, TypeLogement.COLOCATION, false, true, true, true, false, signature);
-        Bail bC = gestion.attribuerLogement(chloe, TypeLogement.T1, false, false, true, true, true, signature);
-        Bail bD = gestion.attribuerLogement(diego, TypeLogement.T2, true, true, false, true, true, signature);
-        Bail bE = gestion.attribuerLogement(emma, TypeLogement.COLOCATION, false, false, false, true, false, signature);
-        Bail bG = gestion.attribuerLogement(gaelle, TypeLogement.STUDIO, false, true, false, true, false, signature);
-        Bail bH = gestion.attribuerLogement(hugo, TypeLogement.COLOCATION, false, true, false, false, true, signature);
+        Bail bA = gestion.attribuerLogement(alice, TypeLogement.STUDIO, options(Option.PARKING, Option.ASSURANCE), signature);
+        Bail bB = gestion.attribuerLogement(bilal, TypeLogement.COLOCATION, options(Option.MENAGE, Option.LAVERIE, Option.FIBRE), signature);
+        Bail bC = gestion.attribuerLogement(chloe, TypeLogement.T1, options(Option.LAVERIE, Option.FIBRE, Option.ASSURANCE), signature);
+        Bail bD = gestion.attribuerLogement(diego, TypeLogement.T2, options(Option.PARKING, Option.MENAGE, Option.FIBRE, Option.ASSURANCE), signature);
+        Bail bE = gestion.attribuerLogement(emma, TypeLogement.COLOCATION, options(Option.FIBRE), signature);
+        Bail bG = gestion.attribuerLogement(gaelle, TypeLogement.STUDIO, options(Option.MENAGE, Option.FIBRE), signature);
+        Bail bH = gestion.attribuerLogement(hugo, TypeLogement.COLOCATION, options(Option.MENAGE, Option.ASSURANCE), signature);
 
         System.out.println();
         LocalDate rentree = LocalDate.of(2026, 9, 1);
@@ -112,5 +114,9 @@ public class Main {
                 serviceBail,
                 serviceLogement
         );
+    }
+
+    private static Set<Option> options(Option... options) {
+        return options.length == 0 ? EnumSet.noneOf(Option.class) : EnumSet.of(options[0], options);
     }
 }

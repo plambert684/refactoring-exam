@@ -1,6 +1,7 @@
 package fr.efrei.residence;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 public class GestionResidence {
 
@@ -49,11 +50,9 @@ public class GestionResidence {
         return type == null ? null : ajouterLogement(type, numero, surface, etage, meuble, param);
     }
 
-    public Bail attribuerLogement(Etudiant etudiant, TypeLogement type, boolean parking,
-                                  boolean menage, boolean laverie, boolean fibre,
-                                  boolean assurance, LocalDate dateSignature) {
-        return attributions.assign(etudiant, type, parking, menage, laverie, fibre,
-                assurance, dateSignature);
+    public Bail attribuerLogement(Etudiant etudiant, TypeLogement type, Set<Option> options,
+                                  LocalDate dateSignature) {
+        return attributions.assign(etudiant, type, options, dateSignature);
     }
 
     public boolean entrerDansLesLieux(String id, LocalDate date) {

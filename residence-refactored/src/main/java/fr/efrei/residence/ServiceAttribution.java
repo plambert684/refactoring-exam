@@ -1,6 +1,7 @@
 package fr.efrei.residence;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 public class ServiceAttribution {
 
@@ -20,8 +21,8 @@ public class ServiceAttribution {
         this.notifications = notifications;
     }
 
-    public Bail assign(Etudiant etudiant, TypeLogement type, boolean parking, boolean menage,
-                       boolean laverie, boolean fibre, boolean assurance, LocalDate dateSignature) {
+    public Bail assign(Etudiant etudiant, TypeLogement type, Set<Option> options,
+                       LocalDate dateSignature) {
         System.out.println("--- Attribution d'un " + type + " à " + etudiant.getNomComplet());
         Logement choisi = null;
         double loyer = 0;
@@ -30,7 +31,7 @@ public class ServiceAttribution {
             if (logement.getType() != type || !logement.estLibre()) continue;
             if (etudiant.isPmr() && !logement.estAccessiblePMR()) continue;
             double candidat = calculateur.calculerLoyer(logement, etudiant.getProfil(),
-                    etudiant.getEchelonBourse(), parking, menage, laverie, fibre, assurance);
+                    etudiant.getEchelonBourse(), options);
             double chargesCandidat = calculateur.calculerCharges(logement);
             if (!etudiant.getProfil().regle().estSolvable(
                     etudiant.getRessourcesMensuelles(), candidat + chargesCandidat)) {
@@ -51,12 +52,7 @@ public class ServiceAttribution {
         else choisi.loger(etudiant);
 
         String id = identifiants.prochainId();
-        Bail bail = new Bail(id, etudiant, choisi, dateSignature);
-        bail.parking = parking;
-        bail.menage = menage;
-        bail.laverie = laverie;
-        bail.fibre = fibre;
-        bail.assurance = assurance;
+        Bail bail = new Bail(id, etudiant, choisi, dateSignature, options);
         bail.setLoyerHorsCharges(loyer);
         bail.setCharges(charges);
         RegleProfil regle = etudiant.getProfil().regle();

@@ -1,5 +1,7 @@
 package fr.efrei.residence;
 
+import java.util.Set;
+
 public class CalculateurLoyer {
 
     private static final double CENTIMES = 100.0;
@@ -10,9 +12,9 @@ public class CalculateurLoyer {
         this.assembleur = new AssembleurLoyer();
     }
 
-    public double calculerLoyer(Logement logement, Profil profil, int echelon, boolean parking, boolean menage, boolean laverie, boolean fibre, boolean assurance) {
+    public double calculerLoyer(Logement logement, Profil profil, int echelon, Set<Option> options) {
 
-        double montantAvecOptions = assembleur.assembler(logement,parking,menage,laverie,fibre,assurance).montant();
+        double montantAvecOptions = assembleur.assembler(logement, options).montant();
 
         double montantAvecRemise = profil.regle().appliquerRemise(montantAvecOptions, echelon);
 

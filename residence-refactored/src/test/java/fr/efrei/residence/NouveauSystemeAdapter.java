@@ -106,9 +106,9 @@ public class NouveauSystemeAdapter implements SystemeResidence {
             return OptionalDouble.empty();
         }
         Set<Option> o = d.options();
-        return OptionalDouble.of(new CalculateurLoyer().calculerLoyer(l, fr.efrei.residence.Profil.valueOf(d.profil().name()), d.echelonBourse(),
-                o.contains(Option.PARKING), o.contains(Option.MENAGE), o.contains(Option.LAVERIE),
-                o.contains(Option.FIBRE), o.contains(Option.ASSURANCE)));
+        return OptionalDouble.of(new CalculateurLoyer().calculerLoyer(l,
+                fr.efrei.residence.Profil.valueOf(d.profil().name()), d.echelonBourse(),
+                convertirOptions(o)));
     }
 
     @Override
@@ -118,8 +118,8 @@ public class NouveauSystemeAdapter implements SystemeResidence {
             return Optional.empty();
         }
         Set<Option> o = d.options();
-        Bail b = gestion.attribuerLogement(e, fr.efrei.residence.TypeLogement.valueOf(d.type().name()), o.contains(Option.PARKING), o.contains(Option.MENAGE),
-                o.contains(Option.LAVERIE), o.contains(Option.FIBRE), o.contains(Option.ASSURANCE), d.dateSignature());
+        Bail b = gestion.attribuerLogement(e, fr.efrei.residence.TypeLogement.valueOf(d.type().name()),
+                convertirOptions(o), d.dateSignature());
         return Optional.ofNullable(b).map(Bail::getId);
     }
 
@@ -192,5 +192,13 @@ public class NouveauSystemeAdapter implements SystemeResidence {
 
     private Etudiant etudiant(String ref) {
         return etudiantRepository.trouver(ref);
+    }
+
+    private Set<fr.efrei.residence.Option> convertirOptions(Set<Option> options) {
+        Set<fr.efrei.residence.Option> resultat = java.util.EnumSet.noneOf(fr.efrei.residence.Option.class);
+        for (Option option : options) {
+            resultat.add(fr.efrei.residence.Option.valueOf(option.name()));
+        }
+        return resultat;
     }
 }

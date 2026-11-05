@@ -1,5 +1,7 @@
 package fr.efrei.residence;
 
+import java.util.Set;
+
 public class GenerateurQuittance {
 
     public String generate(Bail bail, String mois) {
@@ -36,11 +38,12 @@ public class GenerateurQuittance {
 
     private String formatOptions(Bail bail) {
         StringBuilder options = new StringBuilder();
-        if (bail.menage) options.append("ménage, ");
-        if (bail.parking) options.append("parking, ");
-        if (bail.laverie) options.append("laverie, ");
-        if (bail.fibre) options.append("fibre, ");
-        if (bail.assurance) options.append("assurance, ");
+        Set<Option> bailOptions = bail.getOptions();
+        if (bailOptions.contains(Option.MENAGE)) options.append("ménage, ");
+        if (bailOptions.contains(Option.PARKING)) options.append("parking, ");
+        if (bailOptions.contains(Option.LAVERIE)) options.append("laverie, ");
+        if (bailOptions.contains(Option.FIBRE)) options.append("fibre, ");
+        if (bailOptions.contains(Option.ASSURANCE)) options.append("assurance, ");
         return options.length() == 0
                 ? "aucune"
                 : options.substring(0, options.length() - 2);

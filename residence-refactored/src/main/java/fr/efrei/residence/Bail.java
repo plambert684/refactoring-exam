@@ -2,7 +2,9 @@ package fr.efrei.residence;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.List;
+import java.util.Set;
 
 public class Bail {
 
@@ -19,11 +21,7 @@ public class Bail {
     private double caution;
     private double fraisDossier;
 
-    public boolean parking;
-    public boolean menage;
-    public boolean laverie;
-    public boolean fibre;
-    public boolean assurance;
+    private final Set<Option> options;
 
     public List<Paiement> paiements = new ArrayList<Paiement>();
     public double soldeDu = 0;
@@ -31,11 +29,19 @@ public class Bail {
     public double cautionRestituee = 0;
 
     public Bail(String id, Etudiant etudiant, Logement logement, LocalDate dateSignature) {
+        this(id, etudiant, logement, dateSignature, Set.of());
+    }
+
+    public Bail(String id, Etudiant etudiant, Logement logement, LocalDate dateSignature,
+                Set<Option> options) {
         this.id = id;
         this.etudiant = etudiant;
         this.logement = logement;
         this.dateSignature = dateSignature;
         this.statut = StatutBail.SIGNE;
+        this.options = options.isEmpty()
+                ? EnumSet.noneOf(Option.class)
+                : EnumSet.copyOf(options);
     }
 
     public String getId() { return id; }
@@ -57,6 +63,7 @@ public class Bail {
     public void setCaution(double c) { this.caution = c; }
     public double getFraisDossier() { return fraisDossier; }
     public void setFraisDossier(double f) { this.fraisDossier = f; }
+    public Set<Option> getOptions() { return Set.copyOf(options); }
 
     public Paiement findPayment(String mois) {
         for (Paiement paiement : paiements) {
