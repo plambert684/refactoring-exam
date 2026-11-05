@@ -58,6 +58,9 @@ public class ServiceAttribution {
         bail.setCaution(Utils.arrondir(regle.depotGarantie(loyer)));
         bail.setFraisDossier(regle.fraisDossier());
         bailRepository.sauvegarder(bail);
+        System.out.println("  Bail " + id + " signé : " + choisi.getNumero() + ", "
+                + Utils.euros(bail.getLoyerChargesComprises()) + " CC/mois, caution "
+                + Utils.euros(bail.getCaution()) + ", frais de dossier " + Utils.euros(bail.getFraisDossier()));
         notifications.notify(etudiant, "Votre bail " + id,
                 "Bienvenue à la " + Residence.NOM + " ! Logement " + choisi.getNumero()
                         + ", loyer " + Utils.euros(bail.getLoyerChargesComprises()) + " charges comprises.");

@@ -35,6 +35,7 @@ public class NouveauSystemeAdapter implements SystemeResidence {
     private NotificationJournal journal;
     private GenerateurQuittance generateurQuittance;
     private Residence residence;
+    private CalculateurLoyer calculateur;
 
     @Override
     public void reinitialiser() {
@@ -49,8 +50,9 @@ public class NouveauSystemeAdapter implements SystemeResidence {
         );
         generateurQuittance = new GenerateurQuittance();
         ServiceNotification serviceNotifications = new ServiceNotification(canaux);
+        calculateur = new CalculateurLoyer(new AssembleurLoyer());
         ServiceAttribution attributions = new ServiceAttribution(residence, bailRepository,
-                new CalculateurLoyer(), new GenerateurIdentifiantBail(), serviceNotifications);
+                calculateur, new GenerateurIdentifiantBail(), serviceNotifications);
         ServiceRapport rapport = new ServiceRapport(residence, bailRepository, journal);
         ServiceBail serviceBail = new ServiceBail(bailRepository, serviceNotifications);
         ServiceLogement serviceLogement = new ServiceLogement(residence);
@@ -102,7 +104,7 @@ public class NouveauSystemeAdapter implements SystemeResidence {
             return OptionalDouble.empty();
         }
         Set<Option> o = d.options();
-        return OptionalDouble.of(new CalculateurLoyer().calculerLoyer(l,
+        return OptionalDouble.of(calculateur.calculerLoyer(l,
                 fr.efrei.residence.Profil.valueOf(d.profil().name()), d.echelonBourse(),
                 convertirOptions(o)));
     }

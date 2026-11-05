@@ -39,6 +39,11 @@ class DecorateursLoyerTest {
     }
 
     @Test
+    void inclutLaFibreEnColocation() {
+        assertEquals(100, new LoyerCollocation(LOYER_100).montant());
+    }
+
+    @Test
     void ajouteLAssurance() {
         assertEquals(109, new LoyerAssurance(LOYER_100).montant());
     }

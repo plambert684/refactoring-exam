@@ -46,8 +46,7 @@ public class GestionResidence {
 
     public Logement ajouterLogement(String code, String numero, double surface,
                                     int etage, boolean meuble, int param) {
-        TypeLogement type = TypeLogement.depuisCode(code);
-        return type == null ? null : ajouterLogement(type, numero, surface, etage, meuble, param);
+        return logements.add(code, numero, surface, etage, meuble, param);
     }
 
     public Bail attribuerLogement(Etudiant etudiant, TypeLogement type, Set<Option> options,

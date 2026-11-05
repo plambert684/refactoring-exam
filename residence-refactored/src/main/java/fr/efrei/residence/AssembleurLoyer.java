@@ -33,7 +33,9 @@ public class AssembleurLoyer {
         }
 
         if (options.contains(Option.FIBRE)) {
-            loyer = new LoyerFibre(loyer, regle.prixFibre());
+            loyer = logement.getType() == TypeLogement.COLOCATION
+                    ? new LoyerCollocation(loyer)
+                    : new LoyerFibre(loyer, regle.prixFibre());
         }
 
         if (options.contains(Option.ASSURANCE)) {

@@ -95,8 +95,9 @@ public class Main {
         BailRepository baux = new BailRepositoryMemoire();
         ServiceNotification serviceNotifications = new ServiceNotification(canaux);
         Residence residence = new Residence();
+        CalculateurLoyer calculateur = new CalculateurLoyer(new AssembleurLoyer());
         ServiceAttribution attributions = new ServiceAttribution(residence, baux,
-                new CalculateurLoyer(), new GenerateurIdentifiantBail(), serviceNotifications);
+                calculateur, new GenerateurIdentifiantBail(), serviceNotifications);
         ServiceRapport rapport = new ServiceRapport(residence, baux, journal);
         ServiceBail serviceBail = new ServiceBail(baux, serviceNotifications);
         ServiceLogement serviceLogement = new ServiceLogement(residence);
