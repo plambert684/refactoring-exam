@@ -30,21 +30,44 @@ import java.util.Set;
 public class NouveauSystemeAdapter implements SystemeResidence {
 
     private GestionResidence gestion;
+    private EtudiantRepository etudiantRepository;
+    private BailRepository bailRepository;
+    private NotificationJournal journal;
+    private GenerateurQuittance generateurQuittance;
+    private Residence residence;
 
     @Override
     public void reinitialiser() {
-        Database.getInstance();
-        Database.etudiants.clear();
-        Database.baux.clear();
-        EmailService.journal.clear();
-        SmsService.journal.clear();
-        CourrierService.journal.clear();
-        SmsService.compteurSms = 0;
-        CourrierService.totalAffranchissement = 0;
-        Etudiant.compteur = 0;
-        GestionResidence.compteurBail = 0;
-        Residence.initialiser();
-        gestion = new GestionResidence();
+        residence = new Residence();
+        etudiantRepository = new EtudiantRepositoryMemoire();
+        bailRepository = new BailRepositoryMemoire();
+        journal = new NotificationJournal();
+        CanalNotificationFactory canaux = new CanalNotificationFactory(
+                new NotificationEmail(new EmailService(journal)),
+                new NotificationSms(new SmsService(journal)),
+                new NotificationCourrier(new CourrierService(journal))
+        );
+        generateurQuittance = new GenerateurQuittance();
+        ServiceNotification serviceNotifications = new ServiceNotification(canaux);
+        ServiceAttribution attributions = new ServiceAttribution(residence, bailRepository,
+                new CalculateurLoyer(), new GenerateurIdentifiantBail(), serviceNotifications);
+        ServiceRapport rapport = new ServiceRapport(residence, bailRepository, journal);
+        ServiceBail serviceBail = new ServiceBail(bailRepository, serviceNotifications);
+        ServiceLogement serviceLogement = new ServiceLogement(residence);
+        gestion = new GestionResidence(
+                etudiantRepository,
+                bailRepository,
+                new GenerateurIdentifiantBail(),
+                serviceNotifications,
+                journal,
+                new ServiceInscription(etudiantRepository, new GenerateurIdentifiantEtudiant()),
+                new ServiceRelance(bailRepository, serviceNotifications),
+                residence,
+                attributions,
+                rapport,
+                serviceBail,
+                serviceLogement
+        );
     }
 
     @Override
@@ -62,7 +85,7 @@ public class NouveauSystemeAdapter implements SystemeResidence {
 
     @Override
     public Optional<EtatLogement> logement(String numero) {
-        Logement l = Residence.trouver(numero);
+        Logement l = residence.find(numero);
         if (l == null) {
             return Optional.empty();
         }
@@ -78,7 +101,7 @@ public class NouveauSystemeAdapter implements SystemeResidence {
 
     @Override
     public OptionalDouble devisLoyer(DemandeDevis d) {
-        Logement l = Residence.trouver(d.numeroLogement());
+        Logement l = residence.find(d.numeroLogement());
         if (l == null) {
             return OptionalDouble.empty();
         }
@@ -102,7 +125,7 @@ public class NouveauSystemeAdapter implements SystemeResidence {
 
     @Override
     public Optional<EtatBail> consulter(String idBail) {
-        Bail b = Database.baux.get(idBail);
+        Bail b = bailRepository.trouver(idBail);
         if (b == null) {
             return Optional.empty();
         }
@@ -138,7 +161,8 @@ public class NouveauSystemeAdapter implements SystemeResidence {
 
     @Override
     public Optional<String> quittance(String idBail, YearMonth mois) {
-        return Optional.ofNullable(Database.baux.get(idBail)).map(b -> b.genererQuittance(mois.toString()));
+        return Optional.ofNullable(bailRepository.trouver(idBail))
+                .map(b -> generateurQuittance.generate(b, mois.toString()));
     }
 
     @Override
@@ -154,22 +178,19 @@ public class NouveauSystemeAdapter implements SystemeResidence {
     @Override
     public List<Notification> notifications() {
         List<Notification> notifications = new ArrayList<>();
-        for (String[] email : EmailService.journal) {
+        for (String[] email : journal.emails()) {
             notifications.add(new Notification(Canal.EMAIL, email[0], email[1]));
         }
-        for (String[] sms : SmsService.journal) {
+        for (String[] sms : journal.sms()) {
             notifications.add(new Notification(Canal.SMS, sms[0], sms[1]));
         }
-        for (String[] courrier : CourrierService.journal) {
+        for (String[] courrier : journal.courriers()) {
             notifications.add(new Notification(Canal.COURRIER, courrier[0], courrier[1]));
         }
         return notifications;
     }
 
-    private static Etudiant etudiant(String ref) {
-        for (Etudiant e : Database.etudiants.values()) {
-            if (e.getId().equals(ref)) return e;
-        }
-        return null;
+    private Etudiant etudiant(String ref) {
+        return etudiantRepository.trouver(ref);
     }
 }

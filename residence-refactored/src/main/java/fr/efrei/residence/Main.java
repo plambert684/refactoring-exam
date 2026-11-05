@@ -5,8 +5,7 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) {
-        Residence.initialiser();
-        GestionResidence gestion = new GestionResidence();
+        GestionResidence gestion = creerGestionResidence();
 
         gestion.ajouterLogement(TypeLogement.STUDIO, "C002", 16, 0, false, 0);
         gestion.ajouterLogement("DUPLEX", "C003", 60, 1, true, 0);
@@ -64,8 +63,9 @@ public class Main {
         gestion.payerLoyer(bC.getId(), "2026-10", LocalDate.of(2026, 10, 1), 1000);
 
         System.out.println();
-        System.out.println(bD.genererQuittance("2026-09"));
-        System.out.println(bA.genererQuittance("2026-10"));
+        GenerateurQuittance generateurQuittance = new GenerateurQuittance();
+        System.out.println(generateurQuittance.generate(bD, "2026-09"));
+        System.out.println(generateurQuittance.generate(bA, "2026-10"));
 
         System.out.println();
         gestion.relancerImpayes();
@@ -80,5 +80,37 @@ public class Main {
         gestion.sortir(bE.getId(), LocalDate.of(2026, 11, 20), 30);
 
         gestion.afficherRapport();
+    }
+
+    private static GestionResidence creerGestionResidence() {
+        NotificationJournal journal = new NotificationJournal();
+        CanalNotificationFactory canaux = new CanalNotificationFactory(
+                new NotificationEmail(new EmailService(journal)),
+                new NotificationSms(new SmsService(journal)),
+                new NotificationCourrier(new CourrierService(journal))
+        );
+        EtudiantRepository etudiants = new EtudiantRepositoryMemoire();
+        BailRepository baux = new BailRepositoryMemoire();
+        ServiceNotification serviceNotifications = new ServiceNotification(canaux);
+        Residence residence = new Residence();
+        ServiceAttribution attributions = new ServiceAttribution(residence, baux,
+                new CalculateurLoyer(), new GenerateurIdentifiantBail(), serviceNotifications);
+        ServiceRapport rapport = new ServiceRapport(residence, baux, journal);
+        ServiceBail serviceBail = new ServiceBail(baux, serviceNotifications);
+        ServiceLogement serviceLogement = new ServiceLogement(residence);
+        return new GestionResidence(
+                etudiants,
+                baux,
+                new GenerateurIdentifiantBail(),
+                serviceNotifications,
+                journal,
+                new ServiceInscription(etudiants, new GenerateurIdentifiantEtudiant()),
+                new ServiceRelance(baux, serviceNotifications),
+                residence,
+                attributions,
+                rapport,
+                serviceBail,
+                serviceLogement
+        );
     }
 }
