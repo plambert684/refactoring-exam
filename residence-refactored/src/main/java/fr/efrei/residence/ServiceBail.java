@@ -18,11 +18,18 @@ public class ServiceBail {
 
     public boolean enter(String id, LocalDate date) {
         Bail bail = baux.trouver(id);
-        if (bail == null || bail.getStatut() != StatutBail.SIGNE) return false;
-        if (date.isBefore(bail.getDateSignature())) return false;
+        if (bail == null || bail.getStatut() != StatutBail.SIGNE) {
+            System.out.println("Entrée impossible pour " + id);
+            return false;
+        }
+        if (date.isBefore(bail.getDateSignature())) {
+            System.out.println("Entrée impossible avant la signature du bail");
+            return false;
+        }
         bail.setDateEntree(date);
         bail.setStatut(StatutBail.ACTIF);
         baux.mettreAJour(bail);
+        System.out.println("Entrée dans les lieux : " + id + " le " + Utils.date(date));
         notifications.notify(bail.getEtudiant(), "État des lieux d'entrée",
                 "Votre état des lieux d'entrée du logement " + bail.getLogement().getNumero()
                         + " est fait le " + Utils.date(date)
@@ -33,7 +40,10 @@ public class ServiceBail {
     public boolean pay(String id, String month, LocalDate paymentDate, double amount) {
         Bail bail = baux.trouver(id);
         if (bail == null || !(bail.getStatut() == StatutBail.ACTIF
-                || bail.getStatut() == StatutBail.PREAVIS)) return false;
+                || bail.getStatut() == StatutBail.PREAVIS)) {
+            System.out.println("Paiement refusé pour " + id);
+            return false;
+        }
         LocalDate dueDate = YearMonth.parse(month).atDay(DUE_DAY);
         double penalty = paymentDate.isAfter(dueDate)
                 ? bail.getEtudiant().getProfil().regle().penaliteRetard(bail.getLoyerChargesComprises())
@@ -42,6 +52,8 @@ public class ServiceBail {
         bail.paiements.add(new Paiement(month, paymentDate, amount, penalty, due));
         bail.soldeDu = Utils.arrondir(bail.soldeDu + due - amount);
         baux.mettreAJour(bail);
+        System.out.println("Paiement " + id + " " + month + " : " + Utils.euros(amount) + " / " + Utils.euros(due)
+                + (penalty > 0 ? " (dont pénalité " + Utils.euros(penalty) + ")" : ""));
         if (amount < due) {
             notifications.notify(bail.getEtudiant(), "Paiement incomplet " + month,
                     "Nous avons reçu " + Utils.euros(amount) + " sur " + Utils.euros(due)
@@ -55,11 +67,15 @@ public class ServiceBail {
 
     public boolean giveNotice(String id, LocalDate date) {
         Bail bail = baux.trouver(id);
-        if (bail == null || bail.getStatut() != StatutBail.ACTIF) return false;
+        if (bail == null || bail.getStatut() != StatutBail.ACTIF) {
+            System.out.println("Préavis impossible pour " + id);
+            return false;
+        }
         int days = bail.getEtudiant().getProfil().regle().dureePreavisJours();
         bail.setDateFin(date.plusDays(days));
         bail.setStatut(StatutBail.PREAVIS);
         baux.mettreAJour(bail);
+        System.out.println("Préavis " + id + " : fin du bail le " + Utils.date(bail.getDateFin()));
         notifications.notify(bail.getEtudiant(), "Préavis de départ",
                 "Votre préavis de " + days + " jours est enregistré. Fin du bail le "
                         + Utils.date(bail.getDateFin()) + ".");
@@ -68,8 +84,14 @@ public class ServiceBail {
 
     public boolean leave(String id, LocalDate date, double damageRetention) {
         Bail bail = baux.trouver(id);
-        if (bail == null || bail.getStatut() != StatutBail.PREAVIS
-                || date.isBefore(bail.getDateFin())) return false;
+        if (bail == null || bail.getStatut() != StatutBail.PREAVIS) {
+            System.out.println("Sortie impossible pour " + id);
+            return false;
+        }
+        if (date.isBefore(bail.getDateFin())) {
+            System.out.println("Sortie impossible avant la fin du préavis (" + Utils.date(bail.getDateFin()) + ")");
+            return false;
+        }
         Logement logement = bail.getLogement();
         logement.liberer(bail.getEtudiant());
         logement.apresSortie();
@@ -81,6 +103,9 @@ public class ServiceBail {
         bail.soldeDu = Utils.arrondir(remaining);
         bail.setStatut(StatutBail.TERMINE);
         baux.mettreAJour(bail);
+        System.out.println("Sortie " + id + " le " + Utils.date(date) + " : caution " + Utils.euros(bail.getCaution())
+                + ", retenues " + Utils.euros(bail.retenues) + ", impayés " + Utils.euros(unpaid)
+                + " -> restitué " + Utils.euros(bail.cautionRestituee));
         String message = "Votre dépôt de garantie : " + Utils.euros(bail.cautionRestituee)
                 + " vous sera restitué sous " + REFUND_DELAY_DAYS + " jours.";
         if (remaining > 0) message += " Il reste " + Utils.euros(bail.soldeDu) + " à régler.";
@@ -90,11 +115,15 @@ public class ServiceBail {
 
     public boolean cancel(String id) {
         Bail bail = baux.trouver(id);
-        if (bail == null || bail.getStatut() != StatutBail.SIGNE) return false;
+        if (bail == null || bail.getStatut() != StatutBail.SIGNE) {
+            System.out.println("Annulation impossible pour " + id);
+            return false;
+        }
         Logement logement = bail.getLogement();
         logement.liberer(bail.getEtudiant());
         bail.setStatut(StatutBail.ANNULE);
         baux.mettreAJour(bail);
+        System.out.println("Bail " + id + " annulé, frais de dossier conservés : " + Utils.euros(bail.getFraisDossier()));
         notifications.notify(bail.getEtudiant(), "Annulation du bail " + id,
                 "Votre bail est annulé. Les frais de dossier (" + Utils.euros(bail.getFraisDossier())
                         + ") restent acquis.");

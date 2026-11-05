@@ -8,8 +8,8 @@ public class CalculateurLoyer {
 
     private final AssembleurLoyer assembleur;
 
-    public CalculateurLoyer() {
-        this.assembleur = new AssembleurLoyer();
+    public CalculateurLoyer(AssembleurLoyer assembleur) {
+        this.assembleur = assembleur;
     }
 
     public double calculerLoyer(Logement logement, Profil profil, int echelon, Set<Option> options) {
