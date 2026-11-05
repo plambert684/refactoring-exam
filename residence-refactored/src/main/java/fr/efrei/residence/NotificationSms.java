@@ -9,10 +9,10 @@ public class NotificationSms implements CanalNotification {
     }
 
     public void envoyer(Etudiant e, String sujet, String message) {
-        sms.envoyerSms(e.getTelephone(), sujet + " - " + message);
+        sms.send(e.getTelephone(), sujet + " - " + message);
     }
 
     public void relancer(Etudiant e, Bail b) {
-        sms.envoyerSms(e.getTelephone(), "Campus Vert : " + Utils.euros(b.soldeDu) + " impayés sur " + b.getId());
+        sms.send(e.getTelephone(), "Campus Vert : " + Utils.euros(b.soldeDu) + " impayés sur " + b.getId());
     }
 }

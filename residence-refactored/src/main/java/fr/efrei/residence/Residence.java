@@ -3,15 +3,11 @@ package fr.efrei.residence;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Le parc de logements de la résidence.
- */
 public class Residence {
 
     public static final String NOM = "Résidence Campus Vert";
 
-    // TYPE;NUMERO;SURFACE;ETAGE;MEUBLE;PARAM (PARAM = nb de places en coloc, surface du balcon en T2)
-    public static final String[] CATALOGUE = {
+    private static final List<String> CATALOGUE = List.of(
             "STUDIO;A001;26;0;true;0",
             "STUDIO;A102;22;1;true;0",
             "STUDIO;B103;20;1;false;0",
@@ -20,29 +16,37 @@ public class Residence {
             "T2;A201;45;2;false;6",
             "T2;B202;48;2;true;0",
             "COLOCATION;B301;80;3;true;4",
-            "COLOCATION;C001;63;0;true;3",
-    };
+            "COLOCATION;C001;63;0;true;3");
 
-    public static List<Logement> logements = new ArrayList<Logement>();
+    private final List<Logement> logements = new ArrayList<>();
 
-    public static void initialiser() {
+    public Residence() {
+        initialize();
+    }
+
+    public void initialize() {
         logements.clear();
         for (String ligne : CATALOGUE) {
             String[] t = ligne.split(";");
-            Logement l = LogementFactory.creer(TypeLogement.depuisCode(t[0]), t[1], Double.parseDouble(t[2]),
-                    Integer.parseInt(t[3]), Boolean.parseBoolean(t[4]), Integer.parseInt(t[5]));
-            if (l == null) {
-                System.out.println("Type inconnu ignoré : " + t[0]);
-                continue;
-            }
-            logements.add(l);
+            Logement logement = LogementFactory.creer(TypeLogement.depuisCode(t[0]), t[1],
+                    Double.parseDouble(t[2]), Integer.parseInt(t[3]),
+                    Boolean.parseBoolean(t[4]), Integer.parseInt(t[5]));
+            if (logement != null) logements.add(logement);
         }
     }
 
-    public static Logement trouver(String numero) {
-        for (Logement l : logements) {
-            if (l.getNumero().equals(numero)) return l;
-        }
-        return null;
+    public Logement find(String numero) {
+        return logements.stream()
+                .filter(logement -> logement.getNumero().equals(numero))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public void add(Logement logement) {
+        logements.add(logement);
+    }
+
+    public List<Logement> all() {
+        return List.copyOf(logements);
     }
 }

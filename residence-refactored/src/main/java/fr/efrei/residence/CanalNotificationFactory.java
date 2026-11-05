@@ -3,14 +3,26 @@ package fr.efrei.residence;
 /** Seul endroit qui sait construire le service de notification d'un canal. */
 public class CanalNotificationFactory {
 
-    public static CanalNotification pour(Canal canal) {
+    private final CanalNotification email;
+    private final CanalNotification sms;
+    private final CanalNotification courrier;
+
+    public CanalNotificationFactory(CanalNotification email,
+                                    CanalNotification sms,
+                                    CanalNotification courrier) {
+        this.email = email;
+        this.sms = sms;
+        this.courrier = courrier;
+    }
+
+    public CanalNotification pour(Canal canal) {
         switch (canal) {
             case EMAIL:
-                return new NotificationEmail();
+                return email;
             case SMS:
-                return new NotificationSms(new SmsService());
+                return sms;
             case COURRIER:
-                return new NotificationCourrier(new CourrierService());
+                return courrier;
             default:
                 throw new IllegalArgumentException("Canal inconnu : " + canal);
         }

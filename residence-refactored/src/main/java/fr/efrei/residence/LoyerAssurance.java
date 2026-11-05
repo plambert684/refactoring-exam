@@ -1,4 +1,15 @@
 package fr.efrei.residence;
 
-public class LoyerAssurance {
+public class LoyerAssurance extends DecorateurLoyer {
+
+    private static final double PRIX_ASSURANCE = 9;
+
+    public LoyerAssurance(Loyer loyer) {
+        super(loyer);
+    }
+
+    @Override
+    public double montant() {
+        return loyer.montant() + PRIX_ASSURANCE;
+    }
 }
